@@ -5,7 +5,7 @@ export default function App(){
   return(
   <>
     <header className="Navblock">
-      <img src={"./src/assets/Kasa.webp"}></img>
+      <img src={"./src/assets/Kasa.webp"} alt="logo kasa TM"></img>
       <nav className="NavBar">
         <a className="NavBtn" href="/Home">Accueil</a>
         <a className="NavBtn" href="/About">A propos</a>
@@ -14,6 +14,11 @@ export default function App(){
 
     <Routes>
     </Routes>
+
+    <footer className="footer">
+      <img src={"./src/assets/Kasa2.webp"} alt="" />
+      <img src={"./src/assets/kasafooter.webp"} alt="" />
+    </footer>
 
   </>
   );
