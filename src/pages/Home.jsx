@@ -1,9 +1,18 @@
-import data from "..logements.json"
+import Data from "../logements.json"
+import '../Home.css'
 
-export function datamap() {
+export default function Homebanner() {
+    return(
+        <div className="homebanner">
+            <p>Chez vous, partout ailleurs</p>
+        </div>
+    )
+}
+
+export function Datamap() {
     return(
         <div>
-            {data.map((item) => (
+            {Data.map((item) => (
                 <div key={item.id}>
                     <h2>{item.title}</h2>
                     <img src={item.cover[0]} alt={item.title}/>
@@ -12,3 +21,9 @@ export function datamap() {
         </div>
     );
 }
+
+export function Data1 () {
+    return Data
+}
+
+

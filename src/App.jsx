@@ -1,5 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import './Kasa.css'
+import { Data1 } from "./pages/Home.jsx"
+
+console.log(Data1());
 
 export default function App(){
   return(
@@ -9,11 +12,11 @@ export default function App(){
       <nav className="NavBar">
         <a className="NavBtn" href="/Home">Accueil</a>
         <a className="NavBtn" href="/About">A propos</a>
-      </nav>
+      </nav>  
     </header>
 
     <Routes>
-      <Route path="/Home" element={<Home />} />
+
     </Routes>
 
     <footer className="footer">
