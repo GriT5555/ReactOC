@@ -1,0 +1,37 @@
+@font-face{
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: normal;
+    src: local("Montserrat"), url(/src/Montserrat-VariableFont_wght.woff) format("woff");
+}
+
+body{
+    width: 1440px;
+    overflow-x: hidden;
+    font-family: "Montserrat";
+}
+
+.Navblock{
+    display:flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.Navblock, a{
+    font-size: x-large;
+    color: black;
+    text-decoration: none;
+}
+
+.NavBar{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.NavBtn:hover{
+    text-decoration: underline;
+}

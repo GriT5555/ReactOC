@@ -1,15 +1,22 @@
-import { useState } from 'react'
 import { Routes, Route } from "react-router-dom";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './Kasa.css'
 
 export default function App(){
-  <Routes>
-    <Route path="" element={<example/>}/> 
-    <Route path="" element={<example/>}/>
-    <Route path="" element={<example/>}/>
-  </Routes>
+  return(
+  <>
+    <header className="Navblock">
+      <img src={"./src/assets/Kasa.webp"}></img>
+      <nav className="NavBar">
+        <a className="NavBtn" href="/Home">Accueil</a>
+        <a className="NavBtn" href="/About">A propos</a>
+      </nav>
+    </header>
+
+    <Routes>
+    </Routes>
+
+  </>
+  );
 }
 
 //function App() {
