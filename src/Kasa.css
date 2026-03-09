@@ -43,6 +43,12 @@ body{
 
 .footerwebp{
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerimg{
+    max-width: 300px;
+    max-height: 50px;
 }

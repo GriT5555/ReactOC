@@ -13,11 +13,14 @@ export default function App(){
     </header>
 
     <Routes>
+      <Route path="/Home" element={<Home />} />
     </Routes>
 
     <footer className="footer">
-      <img src={"./src/assets/Kasa2.webp"} alt="" />
-      <img src={"./src/assets/kasafooter.webp"} alt="" />
+      <div className="footerwebp">
+        <img className="footerimg" src={"./src/assets/Kasa2.webp"} alt="" />
+        <img className="footerimg" src={"./src/assets/kasafooter.webp"} alt="" />
+      </div>
     </footer>
 
   </>
