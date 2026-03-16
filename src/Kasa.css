@@ -67,15 +67,32 @@ body{
 }
 
 .homebanner{
+    box-sizing: border-box;
     width: 100%;
-    border: solid 1px grey;
+    height: 230px;
     border-radius: 25px;
     text-align: center;
+    align-items: center;
     margin-top: 30px;
     font-size: xx-large;
-    font-weight: bolder;
-    background: url("/public/kasahomebanner.webp");
+    font-weight: 900;
+    box-shadow: 0px 3px 0.3rem grey;
+    color:white;
+}
+
+.darken {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(/public/kasahomebanner.webp);
     background-position: center;
+}
+
+.homebanner h1{
+    position: relative;
+    top: 10%;
 }
 
 .CardsContainer{
@@ -96,8 +113,19 @@ body{
     max-height: 340px;
     box-sizing: border-box;
     border-radius: 10px;
-    border: 2px red solid;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+.Cards::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  inset: 0;
+
+  background: linear-gradient(
+    transparent 50%,
+    rgba(0,0,0,0.9) 100%
+  );
 }
 
 .Cards h2{
@@ -105,12 +133,15 @@ body{
     z-index: 3;
     left: 20px;
     bottom: 0;
+    color: white;
 }   
 
 .CardsPics{
+    border-radius: 25px;
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover;
     height: 100%;
     z-index: 1;
 }
+
+/* Home specific css ends (needs phone version now) */ 
