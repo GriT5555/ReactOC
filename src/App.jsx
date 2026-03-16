@@ -1,31 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import './Kasa.css'
 import { Data1 } from "./pages/Home.jsx"
+import Home from "./pages/Home.jsx";
+
 
 console.log(Data1());
 
 export default function App(){
   return(
   <>
-    <header className="Navblock">
-      <img src={"./src/assets/Kasa.webp"} alt="logo kasa TM"></img>
-      <nav className="NavBar">
-        <a className="NavBtn" href="/Home">Accueil</a>
-        <a className="NavBtn" href="/About">A propos</a>
-      </nav>  
-    </header>
-
+    <Home />
     <Routes>
-
-    </Routes>
-
-    <footer className="footer">
-      <div className="footerwebp">
-        <img className="footerimg" src={"./src/assets/Kasa2.webp"} alt="" />
-        <img className="footerimg" src={"./src/assets/kasafooter.webp"} alt="" />
-      </div>
-    </footer>
-
+    </Routes> 
   </>
   );
 }

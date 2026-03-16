@@ -18,6 +18,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 15px;
 }
 
 .Navblock, a{
@@ -51,4 +52,12 @@ body{
 .footerimg{
     max-width: 300px;
     max-height: 50px;
+}
+
+/* Home specific css */ 
+
+.homebanner{
+    width: 80%;
+    border-radius: 25px;
+    background: url("/src/assets/kasahomebanner.webp");
 }
