@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import './Kasa.css'
-import { Data1 } from "./pages/Home.jsx"
-import Home from "./pages/Home.jsx";
+import { Data1 } from "./pages/Home"
+import Home from "./pages/Home";
 
 
 console.log(Data1());
@@ -9,8 +9,8 @@ console.log(Data1());
 export default function App(){
   return(
   <>
-    <Home />
     <Routes>
+      <Route path="" element={<Home/>}/>
     </Routes> 
   </>
   );

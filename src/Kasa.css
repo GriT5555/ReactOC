@@ -47,6 +47,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 
 .footerimg{
@@ -56,8 +57,17 @@ body{
 
 /* Home specific css */ 
 
-.homebanner{
+.Guts{
+    display: flex;
+    flex-direction: column;
     width: 80%;
+    margin: auto;
+}
+
+.homebanner{
+    width: 100%;
+    border: solid 1px grey;
     border-radius: 25px;
-    background: url("/src/assets/kasahomebanner.webp");
+    text-align: center;
+    background-image: url("../public/kasahomebanner.webp");
 }

@@ -11,7 +11,11 @@ export default function Home(){
   return(
   <>
     <Header />
-    <Homebanner />
+    <div className="Guts">
+        <Homebanner />
+        <div className="CardsContainer">
+        </div>
+    </div>
     <Footer />
   </>
   );
