@@ -2,11 +2,11 @@ import Data from "../logements.json"
 
 export default function Card() {
     return(
-        <div>
+        <div className="CardsContainer">
             {Data.map((item) => (
-                <div key={item.id}>
+                <div className="Cards" key={item.id}>
+                    <img className="CardsPics" src={item.cover} alt={item.title}/>
                     <h2>{item.title}</h2>
-                    <img src={item.cover[0]} alt={item.title}/>
                 </div>
             ))}
         </div>

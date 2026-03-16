@@ -3,7 +3,6 @@ import './Kasa.css'
 import { Data1 } from "./pages/Home"
 import Home from "./pages/Home";
 
-
 console.log(Data1());
 
 export default function App(){
