@@ -1,7 +1,7 @@
 export default function Homebanner() {
     return(
         <div className="homebanner">
-            <p>Chez vous, partout ailleurs</p>
+            <h1>Chez vous, partout ailleurs</h1>
         </div>
     )
 }

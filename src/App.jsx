@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import './Kasa.css'
 import { Data1 } from "./pages/Home"
+import { useState } from 'react';
 import Home from "./pages/Home";
 
 console.log(Data1());
