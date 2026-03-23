@@ -1,15 +1,18 @@
 import { useState } from "react"
 
-export default function Collapse() {
+export default function Collapsible({title, content, children}) {
+const [isOpen, setIsOpen] = useState(false);
+
     return(
         <>
-            <div>
-                <div>
-                    <label>
-
-                    </label>
-                </div>
-            </div>
+            <button className="CollapseBtn" onClick={() => {
+                console.log("button clicked");
+                setIsOpen(!isOpen);
+                }}>
+                    {title}
+                <img src={"./public/arrowbtn.webp"} />
+            </button>
+            {isOpen && <div className="CollapseCtn" >{children || content}</div>}
         </>
         )
-    }
+    } 

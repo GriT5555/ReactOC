@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 export default function Homebanner() {
     return(
         <div className="homebanner darken">
