@@ -6,6 +6,7 @@
 }
 
 body{
+    min-height: 100%;
     max-width:1440px;
     overflow-x: hidden;
     font-family: "Montserrat";
@@ -39,8 +40,11 @@ body{
 }
 
 .footer{
+    margin-top: auto;
+    width: 1440px;
     background-color: black;
     margin-top: 50px;
+    box-sizing: border-box;
 }
 
 .footerwebp{
@@ -147,7 +151,7 @@ body{
 
 /* Home specific css ends (needs phone version now) */ 
 
-/* About specific css */
+/* collapse specific css */
 
 .CollapseBlock{
     display: flex;
@@ -192,5 +196,16 @@ body{
     font-size: large;
     font-weight: 900;
 }
+
+@keyframes btn-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* collapse specific css ends */ 
 
 
