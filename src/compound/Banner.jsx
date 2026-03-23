@@ -1,9 +1,10 @@
-import { useState } from "react"
+export default function Homebanner({src, title}) {
 
-export default function Homebanner() {
     return(
-        <div className="homebanner darken">
-            <h1>Chez vous, partout ailleurs</h1>
+        <div className="homebanner darken"
+        style={{ backgroundImage: `url(${src})` }}
+        >
+            <h1> {title} </h1>
         </div>
     )
 }

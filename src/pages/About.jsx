@@ -2,13 +2,15 @@ import Header from "../compound/Header";
 import Footer from "../compound/Footer";
 import Homebanner from "../compound/Banner";
 import Collapsible from "../compound/Dropdown";
+import BannerimgA from "../assets/bannerimg2.webp"
 
 export default function About() {
+    console.log(BannerimgA);
     return(
         <>
             <Header />
             <div className="Guts">
-                <Homebanner />
+                <Homebanner src= {BannerimgA} title="" />
                 <div className="CollapseBlock">
                     <Collapsible title="Fiabilité"
                     content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements et toutes les informations sont régulièrement verifiées par nos équipes."

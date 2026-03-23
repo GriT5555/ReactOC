@@ -10,7 +10,7 @@ const [isOpen, setIsOpen] = useState(false);
                 setIsOpen(!isOpen);
                 }}>
                     {title}
-                <img src={"./public/arrowbtn.webp"} />
+                <img className="CollapseImg" src={"./public/arrowbtn.webp"} />
             </button>
             {isOpen && <div className="CollapseCtn" >{children || content}</div>}
         </>
