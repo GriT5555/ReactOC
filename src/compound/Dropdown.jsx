@@ -1,6 +1,7 @@
 import { useState } from "react"
+import Arrow from "../../public/arrowbtn.webp"
 
-export default function Collapsible({title, content, children}) {
+export default function Collapse({title, content, children}) {
 const [isOpen, setIsOpen] = useState(false);
 
     return(
@@ -10,7 +11,7 @@ const [isOpen, setIsOpen] = useState(false);
                 setIsOpen(!isOpen);
                 }}>
                     {title}
-                <img className="CollapseImg" src={"./public/arrowbtn.webp"} />
+                <img className="CollapseImg" src={Arrow} />
             </button>
             {isOpen && <div className="CollapseCtn" >{children || content}</div>}
         </>
