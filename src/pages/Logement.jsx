@@ -11,6 +11,12 @@ import Collapse from "../compound/Dropdown";
 export default function Logement() {
 const {id} = useParams();
 const LogementX = Data.find((item) =>  item.id===id );
+const TagList = LogementX.tags.map(tag =>
+    <li>{tag}</li>
+);
+const EquipList = LogementX.equipments.map(equipments =>
+    <li>{equipments}</li>
+)
 if (!LogementX) return (
     <>
         <p>404 - La page que vous demandez n'existe pas.</p>
@@ -24,11 +30,11 @@ if (!LogementX) return (
         <div className="Guts">
             <Carousel pictures={LogementX.pictures} />
             <div className="LogementXAttributes">
-                <Tags title={LogementX.title} location={LogementX.location} tags={LogementX.tags} />
+                <Tags title={LogementX.title} location={LogementX.location} tags={TagList} />
                 <Host name={LogementX.host.name} profile={LogementX.host.picture} rating={LogementX.rating} />
             </div>
         <Collapse content={LogementX.description}/>
-        <Collapse content={LogementX.equipments}/>
+        <Collapse content={EquipList}/>
         </div>
         <Footer />
         </>
