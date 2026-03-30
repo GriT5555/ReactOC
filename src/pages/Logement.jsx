@@ -3,6 +3,7 @@ import Data from "../logements.json"
 import Header from "../compound/Header";
 import Footer from "../compound/Footer";
 import Carousel from "../compound/Carousel";
+import Tags from "../compound/Tags";
 
 export default function Logement() {
 const {id} = useParams();
@@ -19,6 +20,7 @@ if (!LogementX) return (
         <Header />
         <div className="Guts">
             <Carousel pictures={LogementX.pictures} />
+            <Tags title={LogementX.title} location={LogementX.location} tags={LogementX.tags} />
         </div>
         <Footer />
         </>

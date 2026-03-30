@@ -1,5 +1,9 @@
-import { Data1 } from "../pages/Home"
-
-export default function Tags() {
-    const 
+export default function Tags({title,location,tags = []}) {
+    return (
+        <div className="LogementTags">
+                <p>{title}</p>
+                <p>{location}</p>
+                <p>{tags}</p>
+        </div>
+    )
 }
