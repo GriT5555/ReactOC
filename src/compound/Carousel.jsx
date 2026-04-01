@@ -12,11 +12,11 @@ if (!pictures.length) return null;
     return (
         <>
             <div className="carousel">
-                <img src={pictures[index]} alt=""/>
-
                 <button className="CarouselBtn" onClick={previous}>
                     <img src={"/LBtn.webp"} alt=""/>
                 </button>
+
+                <img className="CarouselImg" src={pictures[index]} alt=""/>
 
                 <button className="CarouselBtn" onClick={next}>
                     <img src={"/RBtn.webp"} alt=""/>

@@ -33,8 +33,10 @@ if (!LogementX) return (
                 <Tags title={LogementX.title} location={LogementX.location} tags={TagList} />
                 <Host name={LogementX.host.name} profile={LogementX.host.picture} rating={LogementX.rating} />
             </div>
-        <Collapse content={LogementX.description}/>
-        <Collapse content={EquipList}/>
+        <div className="LogementXCollapse">
+            <Collapse content={LogementX.description}/>
+            <Collapse content={EquipList}/>
+        </div>
         </div>
         <Footer />
         </>
