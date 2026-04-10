@@ -206,9 +206,20 @@ li{
 }
 
 .CollapseBtn img{
+    display: block;
     object-fit: contain;
     width: 32px;
     height: 32px;
+    padding-right: 15px;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.arrow.open{
+    transform: translate(-30%) rotate(180deg);
 }
 
 .CollapseCtn{
@@ -245,7 +256,6 @@ li{
     top: 38%;
     background: none;
     border: none;
-    
 }
 
 .Prev{

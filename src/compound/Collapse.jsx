@@ -11,7 +11,7 @@ const [isOpen, setIsOpen] = useState(false);
                 setIsOpen(!isOpen);
                 }}>
                     {title}
-                <img className="CollapseImg" src={Arrow} />
+                <img className={isOpen ? "arrow open" : "arrow"} src={Arrow} />
             </button>
             {isOpen && <div className="CollapseCtn" >{children || content}</div>}
         </>
