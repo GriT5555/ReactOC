@@ -13,6 +13,10 @@ body{
     margin: auto;
 }
 
+li{
+    list-style-type: none;
+}
+
 #root{
     display: flex;
     flex-direction: column;
@@ -48,9 +52,9 @@ body{
 .footer{
     width: 1440px;
     background-color: black;
-    margin-top: 50px;
     box-sizing: border-box;
     margin-top: auto;
+    
 }
 
 .footerwebp{
@@ -75,6 +79,9 @@ body{
     width: 100%;
     gap: 20px;
     font-size: small;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
 }
 
 .homebanner{
@@ -166,6 +173,7 @@ body{
     justify-content: center;
     margin: auto;
     box-sizing: border-box;
+    width: 1024px;
 }
 
 .CollapseBtn{
@@ -174,7 +182,6 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: #FF6C5C;
-    width: 1023px;
     min-height: 50px;
     border-radius: 5px;
     border: none;
@@ -186,6 +193,18 @@ body{
     margin-top: 15px;
 }
 
+.LargeC{
+    width: 100%;
+}
+
+.MediumC{
+    width:100%;
+}
+
+.LXC{
+    width: 50%;
+}
+
 .CollapseBtn img{
     object-fit: contain;
     width: 32px;
@@ -193,7 +212,6 @@ body{
 }
 
 .CollapseCtn{
-    height: 100px;
     background-color: #FBFBFB;
     border-radius: 5px;
     box-sizing: border-box;
@@ -202,13 +220,151 @@ body{
     border-radius: 5px;
     font-size: large;
     font-weight: 900;
+    margin-bottom: 10px;
 }
 
 /* collapse specific css ends */ 
 
 /* carousel sepcific css */ 
 
+.Carousel{
+    position: relative;
+    box-sizing: border-box;
+    height: 700px;
+}
 
+.CarouselImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.CarouselBtn{
+    position: absolute;
+    top: 38%;
+    background: none;
+    border: none;
+    
+}
+
+.Prev{
+    left: 15px;
+}
+
+.Next{
+    right: 25px;
+}
+
+.PicturesIndex{
+    position: relative;
+    left: 50%;
+    bottom: 10%;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}
 
 /* carousel sepcific css ends */ 
+
+/* Tags specific css */ 
+
+.LogementXAttributes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.TagsBlock{
+    box-sizing: border-box;
+}
+
+.TagsTitle{
+    color: #FF6C5C;
+    font-size: 3em;
+    font-weight: 900;
+    margin: 0;
+}
+
+.TagsLoctn{
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.Taglist{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.Tags{
+    color: white;
+    background-color: #FF6C5C;
+    font-size: large;
+    font-weight: 700;
+    margin: 0;
+    border-radius: 10px;
+    padding: 5px 20px 5px 20px;
+}
+
+.HostInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.Hostname{
+    color: #FF6C5C;
+    font-size: x-large
+}
+
+.Hostpic{
+    border-radius: 75px;
+}
+
+.LogementXCollapseBox{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+/* Tags specific css ends */ 
+
+/* 404 css */
+
+.guts404{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+.pic404{
+    height: 265px;
+    width: 600px;
+}
+
+.text404box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text404{
+    color: #FF6C5C;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.B2Home{
+    color: black;
+    font-size: x-large;
+    font-weight: 900;
+}
+
+/* 404 css ends */ 
 

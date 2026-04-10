@@ -11,18 +11,18 @@ const previous = () => {
 if (!pictures.length) return null;
     return (
         <>
-            <div className="carousel">
-                <button className="CarouselBtn" onClick={previous}>
+            <div className="Carousel">
+                <button className="CarouselBtn Prev" onClick={previous}>
                     <img src={"/LBtn.webp"} alt=""/>
                 </button>
 
                 <img className="CarouselImg" src={pictures[index]} alt=""/>
 
-                <button className="CarouselBtn" onClick={next}>
+                <button className="CarouselBtn Next" onClick={next}>
                     <img src={"/RBtn.webp"} alt=""/>
                 </button>
 
-                {/*potential display of displayed Pictures.index ? <p>{index+1}/{pictures.length}</p> comme la formule modulo des buttons*/}
+                <p className="PicturesIndex">{index+1}/{pictures.length}</p> 
             </div>
         </>
     );

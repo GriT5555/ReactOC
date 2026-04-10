@@ -6,36 +6,35 @@ import Footer from "../compound/Footer";
 import Carousel from "../compound/Carousel";
 import Tags from "../compound/Tags";
 import Host from "../compound/Host";
-import Collapse from "../compound/Dropdown";
+import Collapse from "../compound/Collapse";
 
 export default function Logement() {
 const {id} = useParams();
 const LogementX = Data.find((item) =>  item.id===id );
+if (!LogementX) return <Navigate to ="/404" />
 const TagList = LogementX.tags.map(tag =>
-    <li>{tag}</li>
+    <p className="Tags">{tag}</p>
 );
 const EquipList = LogementX.equipments.map(equipments =>
     <li>{equipments}</li>
-)
-if (!LogementX) return (
-    <>
-        <p>404 - La page que vous demandez n'existe pas.</p>
-        <a href="/" >Retourner sur la page d'accueil</a>
-    </>
 );
 
     return(
         <>
         <Header />
-        <div className="Guts">
+        <div className="Guts">  
             <Carousel pictures={LogementX.pictures} />
             <div className="LogementXAttributes">
                 <Tags title={LogementX.title} location={LogementX.location} tags={TagList} />
                 <Host name={LogementX.host.name} profile={LogementX.host.picture} rating={LogementX.rating} />
             </div>
-        <div className="LogementXCollapse">
-            <Collapse content={LogementX.description}/>
-            <Collapse content={EquipList}/>
+        <div className="LogementXCollapseBox">
+            <div className="LXC" >
+            <Collapse title="Description" className="MediumC" content={LogementX.description}/>
+            </div>
+            <div className="LXC" >
+            <Collapse title="Équipements" className="MediumC" content={EquipList}/>
+            </div>
         </div>
         </div>
         <Footer />

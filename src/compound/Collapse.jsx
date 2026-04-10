@@ -1,12 +1,12 @@
 import { useState } from "react"
 import Arrow from "../../public/arrowbtn.webp"
 
-export default function Collapse({title, content, children}) {
+export default function Collapse({title, content, children, className}) {
 const [isOpen, setIsOpen] = useState(false);
 
     return(
         <>
-            <button className="CollapseBtn" onClick={() => {
+            <button className={`CollapseBtn ${className}`} onClick={() => {
                 console.log("button clicked");
                 setIsOpen(!isOpen);
                 }}>
