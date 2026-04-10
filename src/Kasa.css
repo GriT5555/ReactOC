@@ -1,9 +1,11 @@
-@font-face{
+/*@font-face{
     font-family: "Montserrat";
     font-weight: 300;
     font-style: normal;
     src: local("Montserrat"), url(/src/Montserrat-VariableFont_wght.woff) format("woff");
-}
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
     min-height: 100vh;
@@ -34,7 +36,7 @@ li{
 
 .Navblock a{
     font-size: x-large;
-    font-weight: bold;
+    font-weight: 500;
     color: black;
     text-decoration: none;
 }
@@ -94,7 +96,7 @@ li{
     margin-top: 30px;
     font-size: xx-large;
     font-weight: 900;
-    box-shadow: 0px 3px 0.3rem grey;
+    box-shadow: 0px 3px 0.3rem #C4C4C4;
     color:white;
 }
 
@@ -153,6 +155,10 @@ li{
     left: 20px;
     bottom: 0;
     color: white;
+    width: 50%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
 }   
 
 .CardsPics{
@@ -256,6 +262,11 @@ li{
     top: 38%;
     background: none;
     border: none;
+    transition: all 0.25s;
+}
+
+.CarouselBtn:hover{
+    transform: scale(1.2);
 }
 
 .Prev{
