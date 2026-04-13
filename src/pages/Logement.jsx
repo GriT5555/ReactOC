@@ -7,6 +7,8 @@ import Carousel from "../compound/Carousel";
 import Tags from "../compound/Tags";
 import Host from "../compound/Host";
 import Collapse from "../compound/Collapse";
+import Redstar from "../../public/redstar.webp"
+import Greystar from "../../public/greystar.webp"
 
 export default function Logement() {
 const {id} = useParams();
@@ -18,6 +20,14 @@ const TagList = LogementX.tags.map(tag =>
 const EquipList = LogementX.equipments.map(equipments =>
     <li>{equipments}</li>
 );
+const Ratingvalue = Number(LogementX.rating);
+const Stars = [...Array(5)].map((_, index) => {
+    if(index<Ratingvalue) {
+        return <img key={index} src={Redstar} /> 
+    } else {
+        return <img key={index} src={Greystar} /> 
+    }
+});
 
     return(
         <>
@@ -26,7 +36,7 @@ const EquipList = LogementX.equipments.map(equipments =>
             <Carousel pictures={LogementX.pictures} />
             <div className="LogementXAttributes">
                 <Tags title={LogementX.title} location={LogementX.location} tags={TagList} />
-                <Host name={LogementX.host.name} profile={LogementX.host.picture} rating={LogementX.rating} />
+                <Host name={LogementX.host.name} profile={LogementX.host.picture} rating={Stars} />
             </div>
         <div className="LogementXCollapseBox">
             <div className="LXC" >
