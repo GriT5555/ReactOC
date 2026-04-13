@@ -13,6 +13,7 @@ body{
     overflow-x: hidden;
     font-family: "Montserrat";
     margin: auto;
+    box-sizing: border-box;
 }
 
 li{
@@ -52,11 +53,11 @@ li{
 }
 
 .footer{
-    width: 1440px;
+    width: 100%;
     background-color: black;
     box-sizing: border-box;
     margin-top: auto;
-    
+    border-radius: 10px;
 }
 
 .footerwebp{
@@ -100,13 +101,14 @@ li{
     font-size: x-large;
     box-shadow: 0px 3px 0.3rem #C4C4C4;
     color:white;
+    background-size: cover;
 }
 
 .homebanner::before {
     position: absolute;
     content: "";
     inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* darkness level */
+    background: rgba(0, 0, 0, 0.6); 
     border-radius: inherit;
 }
 
@@ -341,6 +343,7 @@ li{
     align-items: center;
     box-sizing: border-box;
     gap: 15px;
+    padding-bottom: 25px;
 }
 
 .Hostname{
@@ -351,6 +354,19 @@ li{
 
 .Hostpic{
     border-radius: 75px;
+    height: 64px;
+    width: 64px;
+}
+
+.starsrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Stars{
+    height: 24px;
+    width: 24px;
 }
 
 .LogementXCollapseBox{
@@ -397,3 +413,44 @@ li{
 
 /* 404 css ends */ 
 
+/* Media queries: phone 335px */ 
+
+@media (width<=550px) {
+    body{
+        width: 100%;
+        padding:0px 15px;
+    }
+
+    .KasalogoH{
+        max-height: 46px;
+        max-width: 145px;
+    }
+
+    .Navblock a{
+        font-size: small;
+    }
+
+    .NavBar{
+        gap: 15px;
+    }
+
+    .homebanner{
+        height: 110px;
+        margin-top: 10px;
+    }
+
+    .homebanner h1{
+        font-size: x-large;
+        padding-left: 20px;
+    } 
+
+    .CardsContainer{
+        flex-direction: column;
+        padding: 0px;
+        gap: 15px;
+    }
+
+    .Cards{
+        width: 100%;
+    }
+}

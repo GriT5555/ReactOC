@@ -14,18 +14,20 @@ export default function Logement() {
 const {id} = useParams();
 const LogementX = Data.find((item) =>  item.id===id );
 if (!LogementX) return <Navigate to ="/404" />
+
 const TagList = LogementX.tags.map(tag =>
     <p className="Tags">{tag}</p>
 );
 const EquipList = LogementX.equipments.map(equipments =>
     <li>{equipments}</li>
 );
+
 const Ratingvalue = Number(LogementX.rating);
 const Stars = [...Array(5)].map((_, index) => {
     if(index<Ratingvalue) {
-        return <img key={index} src={Redstar} /> 
+        return <img className="Stars" key={index} src={Redstar} /> 
     } else {
-        return <img key={index} src={Greystar} /> 
+        return <img className="Stars" key={index} src={Greystar} /> 
     }
 });
 

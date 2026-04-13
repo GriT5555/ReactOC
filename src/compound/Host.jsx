@@ -6,7 +6,9 @@ export default function Host({name,profile,rating}) {
                 <h2 className="Hostname">{name}</h2>
                 <img className="Hostpic" src={profile}/>
             </div>
-        {rating}
+        <div className="starsrow">
+            {rating}
+        </div>
         </div>
     )
 }
