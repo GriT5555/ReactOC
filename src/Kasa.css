@@ -87,6 +87,7 @@ li{
 }
 
 .homebanner{
+    position: relative;
     display: flex;
     box-sizing: border-box;
     width: 100%;
@@ -101,12 +102,21 @@ li{
     color:white;
 }
 
+.homebanner::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* darkness level */
+    border-radius: inherit;
+}
+
+.homebanner h1 {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
 .darken {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    );
     background-position: center;
 }
 
