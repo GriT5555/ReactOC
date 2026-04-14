@@ -5,7 +5,6 @@ import Collapse from "../compound/Collapse";
 import BannerimgA from "../assets/bannerimg2.webp"
 
 export default function About() {
-    console.log(BannerimgA);
     return(
         <>
             <Header />

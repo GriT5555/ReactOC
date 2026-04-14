@@ -16,7 +16,7 @@ const LogementX = Data.find((item) =>  item.id===id );
 if (!LogementX) return <Navigate to ="/404" />
 
 const TagList = LogementX.tags.map(tag =>
-    <p className="Tags">{tag}</p>
+    <p key={tag} className="Tags">{tag}</p>
 );
 const EquipList = LogementX.equipments.map(equipments =>
     <li>{equipments}</li>

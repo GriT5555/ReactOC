@@ -13,13 +13,13 @@ if (!pictures.length) return null;
         <>
             <div className="Carousel">
                 <button className="CarouselBtn Prev" onClick={previous}>
-                    <img src={"/LBtn.webp"} alt=""/>
+                    <img className="CBtnImg" src={"/LBtn.webp"} alt=""/>
                 </button>
 
                 <img className="CarouselImg" src={pictures[index]} alt=""/>
 
                 <button className="CarouselBtn Next" onClick={next}>
-                    <img src={"/RBtn.webp"} alt=""/>
+                    <img className="CBtnImg" src={"/RBtn.webp"} alt=""/>
                 </button>
 
                 <p className="PicturesIndex">{index+1}/{pictures.length}</p> 
