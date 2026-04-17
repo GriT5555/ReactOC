@@ -41,7 +41,7 @@ const Stars = [...Array(5)].map((_, index) => {
                 <Host name={LogementX.host.name} profile={LogementX.host.picture} rating={Stars} />
             </div>
         <div className="LogementXCollapseBox">
-            <div className="LXC" >
+            <div className="LXC">
             <Collapse title="Description" className="MediumC" content={LogementX.description}/>
             </div>
             <div className="LXC" >
