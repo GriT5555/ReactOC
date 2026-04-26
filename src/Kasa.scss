@@ -16,6 +16,8 @@ body{
     box-sizing: border-box;
 }
 
+$redish : #FF6C5C;
+
 li{
     list-style-type: none;
 }
@@ -33,13 +35,17 @@ li{
     justify-content: space-between;
     align-items: center;
     padding-top: 15px;
-}
 
-.Navblock a{
+    a{
     font-size: xx-large;
     font-weight: 500;
     color: black;
     text-decoration: none;
+    }
+
+    a:hover{
+    text-decoration: underline;
+}
 }
 
 .NavBar{
@@ -48,31 +54,27 @@ li{
     gap: 50px;
 }
 
-.NavBar>a:hover{
-    text-decoration: underline;
-}
-
 .footer{
     width: 100%;
     background-color: black;
     box-sizing: border-box;
     margin-top: auto;
     border-radius: 10px;
-}
 
-.footerwebp{
+    &webp{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
     padding-top: 15px;
-}
-
-.footerimg{
+    }
+    &img{
     max-width: 300px;
     max-height: 50px;
 }
+}
+
 
 /* Home specific css */ 
 
@@ -103,6 +105,11 @@ li{
     color:white;
     background-size: cover;
     text-shadow: black 1px 0px 1px;
+        h1 {
+        position: relative;
+        z-index: 1;
+        color: white;
+        }
 }
 
 .homebanner::before {
@@ -111,12 +118,6 @@ li{
     inset: 0;
     background: rgba(0, 0, 0, 0.6); 
     border-radius: inherit;
-}
-
-.homebanner h1 {
-  position: relative;
-  z-index: 1;
-  color: white;
 }
 
 .darken {
@@ -144,6 +145,17 @@ li{
     box-sizing: border-box;
     border-radius: 10px;
     object-fit: cover;
+        h2{
+        position: absolute;
+        z-index: 3;
+        left: 20px;
+        bottom: 0;
+        color: white;
+        width: 50%;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        }  
 }
 
 .Cards::after {
@@ -156,19 +168,7 @@ li{
     transparent 50%,
     rgba(0,0,0,0.9) 100%
   );
-}
-
-.Cards h2{
-    position: absolute;
-    z-index: 3;
-    left: 20px;
-    bottom: 0;
-    color: white;
-    width: 50%;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-}   
+} 
 
 .CardsPics{
     border-radius: 25px;
@@ -196,7 +196,7 @@ li{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #FF6C5C;
+    background-color: $redish;
     min-height: 50px;
     border-radius: 5px;
     border: none;
@@ -207,6 +207,13 @@ li{
     font-family: "Montserrat";
     margin-top: 15px;
     padding-left: 15px;
+        img{
+        display: block;
+        object-fit: contain;
+        width: 32px;
+        height: 32px;
+        padding-right: 15px;
+        }
 }
 
 .LargeC{
@@ -221,21 +228,12 @@ li{
     width: 50%;
 }
 
-.CollapseBtn img{
-    display: block;
-    object-fit: contain;
-    width: 32px;
-    height: 32px;
-    padding-right: 15px;
-}
-
 .arrow {
     transition: transform 0.3s ease;
     transform-origin: center;
-}
-
-.arrow.open{
+    &.open{
     transform: translate(-30%) rotate(180deg);
+    }
 }
 
 .CollapseCtn{
@@ -311,7 +309,7 @@ li{
 }
 
 .TagsTitle{
-    color: #FF6C5C;
+    color: $redish;
     font-size: 2.5rem;
     font-weight: 500;
     margin: 0;
@@ -330,7 +328,7 @@ li{
 
 .Tags{
     color: white;
-    background-color: #FF6C5C;
+    background-color: $redish;
     font-size: medium;
     font-weight: 600;
     margin: 0;
@@ -348,7 +346,7 @@ li{
 }
 
 .Hostname{
-    color: #FF6C5C;
+    color: $redish;
     font-size: large;
     font-weight: 500;
 }
@@ -400,7 +398,7 @@ li{
 }
 
 .text404{
-    color: #FF6C5C;
+    color: $redish;
     font-size: xx-large;
     font-weight: 500;
     padding-bottom: 175px;
@@ -443,12 +441,11 @@ li{
         height: 110px;
         margin-top: 10px;
         border-radius: 10px;
+            h1{
+            font-size: x-large;
+            padding-left: 20px;
+            } 
     }
-
-    .homebanner h1{
-        font-size: x-large;
-        padding-left: 20px;
-    } 
 
     /* home specific css */ 
 
@@ -545,11 +542,10 @@ li{
     .CollapseBtn{
         font-weight:600; 
         min-height: 30px;
-    }
-
-    .CollapseBtn img{
-        width: 16px;
-        height: 9px;
+            img{
+            width: 16px;
+            height: 9px;
+            }
     }
 
     .LXC{
